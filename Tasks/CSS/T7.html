@@ -22,7 +22,7 @@
             background-color: #75203f;
             margin: 20px auto;
             color: white;
-           
+
         }
 
         .t7 .form-body {
@@ -36,9 +36,8 @@
         .t7 .form-body .labels {
             display: flex;
             flex-direction: column;
-            margin-top: 8px;
-            margin-top: 30px;
-            gap: 36px;
+            margin-top: 23px;
+            gap: 31px;
         }
 
         .t7 .form-body .inputs {
@@ -62,6 +61,13 @@
             border-radius: 6px;
             margin-bottom: 20px;
         }
+
+        #lang {
+            background-color: #e0dadc;
+            padding: 3px;
+            width: fit-content;
+
+        }
     </style>
 </head>
 
@@ -77,6 +83,8 @@
                 <label for="password">Password:</label>
 
                 <label for="phoneNumber">Phone Number:</label>
+
+                <label for="gender">Gender:</label>
 
                 <label for="age">Age:</label>
 
@@ -96,10 +104,21 @@
 
                 <input type="text" id="phoneNumber">
 
+                <div class="radio">
+                    <label for="male">Male:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="female">Female:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="other">Other:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                </div>
+
+
                 <input type="number" id="age">
 
                 <select name="age" id="lang">
-                    <option value="hindi" selected>Hindi</option>
+                    <option value="select" selected>Select language</option>
+                    <option value="hindi">Hindi</option>
                     <option value="english">English</option>
                     <option value="others">Others</option>
                 </select>
@@ -111,7 +130,7 @@
 
         </form>
 
-        <button type="submit">Save</button>
+        <button type="submit">Register</button>
     </div>
 </body>
 
