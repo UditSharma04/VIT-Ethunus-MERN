@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin: 80px auto;
+            width: 450px;
+        }
+
+        .logo{
+            margin: 0 auto;
+        }
+
+        .form{
+            display: flex   ;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+
+        .form div{
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .form label{
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .form div input{
+            padding: 7px;
+            width: 433px;
+        }
+
+        .form button{
+            background-color: #4cb050;
+            color: white;
+            font-weight: 600;
+            border: none;
+            width: 100%;
+            padding: 10px;
+        }
+
+
+        .form check{
+            display: flex;
+            align-items: center;
+        }
+
+
+        .footer{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            border-top: 1px solid rgba(128, 128, 128, 0.355);
+            align-items: baseline;
+            background-color: #f1f1f1;
+        }
+
+        .footer button{
+            background-color: #f54133;
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 11px;
+            height: fit-content;
+        }
+
+        .footer a{
+            color: black;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="../Images/user-icon.png" alt="user-icon">
+        </div>
+        <div class="form">
+            <div class="username">
+                <label for="myUserName">Username</label>
+                <input type="text" placeholder="Enter Username" id="myUserName">
+            </div>
+            <div class="password">
+                <label for="myPassword">Password</label>
+                <input type="text" placeholder="Enter Password" id="myPassword">
+            </div>
+            <button>Login</button>
+
+            <check>
+                <input type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Remember me</label>
+            </check>
+        </div>
+        <div class="footer">
+            <button>Cancel</button>
+            <p>
+                Forgot <a href="#">password ?</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
