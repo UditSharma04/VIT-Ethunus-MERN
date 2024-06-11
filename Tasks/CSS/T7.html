@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 17px;
+        }
+
+        body {
+            background-color: #a22b55;
+        }
+
+        .t7 {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 50%;
+            background-color: #75203f;
+            margin: 20px auto;
+            color: white;
+           
+        }
+
+        .t7 .form-body {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+            gap: 4px;
+        }
+
+        .t7 .form-body .labels {
+            display: flex;
+            flex-direction: column;
+            margin-top: 8px;
+            margin-top: 30px;
+            gap: 36px;
+        }
+
+        .t7 .form-body .inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .t7 .form-body .inputs #gender {
+            width: fit-content;
+        }
+
+        .t7 button {
+            width: 45%;
+            padding: 8px;
+            border: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: #4f4747;
+            margin: 0 auto;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="t7">
+        <form action="#" class="form-body">
+
+            <div class="labels">
+                <label for="name">Name:</label>
+
+                <label for="email">Email:</label>
+
+                <label for="password">Password:</label>
+
+                <label for="phoneNumber">Phone Number:</label>
+
+                <label for="age">Age:</label>
+
+                <label for="lang">Language:</label>
+
+                <label for="zipCode">Zip Code:</label>
+
+                <label for="address">Address:</label>
+            </div>
+
+            <div class="inputs">
+                <input type="text" placeholder="your name" id="name">
+
+                <input type="text" placeholder="nour email" id="email">
+
+                <input type="password" id="password">
+
+                <input type="text" id="phoneNumber">
+
+                <input type="number" id="age">
+
+                <select name="age" id="lang">
+                    <option value="hindi" selected>Hindi</option>
+                    <option value="english">English</option>
+                    <option value="others">Others</option>
+                </select>
+
+                <input type="text" id="zipCode">
+
+                <textarea name="address" id="address" placeholder="Write about yourself..."></textarea>
+            </div>
+
+        </form>
+
+        <button type="submit">Save</button>
+    </div>
+</body>
+
+</html>
