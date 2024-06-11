@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            margin: 0 auto;
+            /* text-align: center; */
+            color: blue;
+        }
+
+        form {
+            width: 50%;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+
+        td {
+            padding: 1px;
+            border: 1px solid black;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 1px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 10px;
+            border-bottom: none;
+            border-top: none;
+            border-left: none;
+        }
+
+        .checkbox-group input {
+            margin-top: 5px;
+        }
+
+        .checkbox-group label {
+            margin-top: 2px;
+        }
+
+        #login-tab {
+            text-align: right;
+        }
+
+        #login{
+            border-top: none;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        label[for="male"],
+        label[for="female"],
+        label[for="english"],
+        label[for="kannada"],
+        label[for="hindi"],
+        label[for="telugu"] {
+            font-weight: 400;
+        }
+
+        #declare{
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+
+        #lang{
+            border-bottom: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>Registration form</h2>
+    </div>
+
+    <form>
+        <table>
+            <tr>
+                <td><label for="first-name">First Name</label></td>
+                <td><input type="text" id="first-name" name="first-name"></td>
+            </tr>
+            <tr>
+                <td><label for="last-name">Last Name</label></td>
+                <td><input type="text" id="last-name" name="last-name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><label for="re-password">Re-enter Password</label></td>
+                <td><input type="password" id="re-password" name="re-password"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">
+                    <label for="gender">Gender:</label>
+                </td>
+
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </td>
+            <tr>
+                <td>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            </tr>
+
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input type="number" id="age" name="age"></td>
+            </tr>
+            <tr>
+                <td><label for="phone-number">Phone Number</label></td>
+                <td><input type="text" id="phone-number" name="phone-number"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><textarea id="address" name="address" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="state">State</label></td>
+                <td><input type="text" id="state" name="state"></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country</label></td>
+                <td>
+                    <select id="country" name="country">
+                        <option value="">Choose your country</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td id="lang"><label for="lang">Languages known</label></td>
+                <td class="checkbox-group">
+                    <input type="checkbox" id="english" name="languages" value="english">
+                    <label for="english">English</label>
+                    <input type="checkbox" id="kannada" name="languages" value="kannada">
+                    <label for="kannada">Kannada</label>
+                    <input type="checkbox" id="hindi" name="languages" value="hindi">
+                    <label for="hindi">Hindi</label>
+                    <input type="checkbox" id="telugu" name="languages" value="telugu">
+                    <label for="telugu">Telugu</label>
+                </td>
+            </tr>
+            <tr >
+                <td colspan="2" id="declare">
+                    <input type="checkbox" name="declaration" id="declaration" checked>
+                    <label for="declaration">Hereby I declare all the given details are true</label>
+                </td>
+            </tr>
+            <tr id="login-tab">
+                <td colspan="2" id="login">
+                    Log in to
+                    <a href="">Ethnus</a>
+                    website
+                </td>
+            </tr>
+    </form>
