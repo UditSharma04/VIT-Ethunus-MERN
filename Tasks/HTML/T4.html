@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 17px;
+        }
+
+        .t3 {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .t3 .form-body {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 280px;
+        }
+
+        .t3 .form-body .labels {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .t3 .form-body .inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .t3 .form-body .inputs #gender {
+            width: fit-content;
+        }
+
+        .t3 button {
+            width: fit-content;
+            border-radius: 6px;
+            box-shadow: inset 0px 0px 9px -1px orange;
+        }
+    </style>
+</head>
+<div class="t3">
+    <form action="#" class="form-body">
+
+        <div class="labels">
+            <label for="fullName">Full Name:</label>
+
+            <label for="userName">Username:</label>
+
+            <label for="password">Password:</label>
+
+            <label for="rePassword">Re Password:</label>
+
+            <label for="adress">Address:</label>
+
+            <label for="age">Age:</label>
+
+            <label for="gender">Gender:</label>
+        </div>
+
+        <div class="inputs">
+            <input type="text" placeholder="Enter full name" id="fullName" value="Vincent Maverick Durano">
+
+            <input type="text" placeholder="Enter username" id="userName" value="Vinz">
+
+            <input type="password" placeholder="Enter password" id="password" value="password">
+
+            <input type="password" placeholder="Confirm password" id="rePassword" value="password">
+
+            <input type="text" placeholder="Enter your address" id="adress" value="Cebu, Philippines">
+
+            <input type="number" placeholder="Enter your age" id="age" value="22">
+
+            <select name="age" id="gender">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+
+    </form>
+
+    <button type="submit">Save</button>
+</div>
+
+
+<body>
+
+</body>
+
+</html>
