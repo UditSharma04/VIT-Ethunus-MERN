@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            width: 520px;
+            margin: 20px auto;
+            background-color: rgb(228, 228, 78);
+            border: 1px dashed gray;
+            height: 400px;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            color: purple;
+        }
+        p, address{
+            font-family: Arial, Helvetica, sans-serif;
+            color: purple; 
+        }
+        .sidebar{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            position: fixed;
+            width:150px;
+            height: auto;
+            margin-top: 30px;
+        }
+        .content{
+            display: inline-block;
+            position: relative;
+            margin-left: 150px;
+        }
+        .button{
+            margin: 4px 15px 4px 15px;
+            width:95px;
+            height: 22.5px;
+            display: block;
+            background-color: white;
+            padding-left: 5px;
+            border-right: 15px solid black;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        address{
+            border-top: 1px dashed gray;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-top: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div class = "sidebar">
+            <a href="#" class="button">Home page</a>
+            <a href="#" class="button">Musings</a>
+            <a href="#" class="button">My town</a>
+            <a href="#" class="button">Links</a>
+        </div>
+        <div class = "content">
+            <h2>My first styled page</h2>
+            <p>
+                Welcome to my styled page!
+            </p>
+            <p>
+                It lacks images, but at least it has style. And it has links, even if they don't go anywhere...
+            </p>
+            <p>
+                There should be more here, but I don't know what yet.
+            </p>
+            </p>
+            <address>
+                Made 5 April 2004<br>by myself.
+            </address>
+        </div>
+    </div>
+</body>
+</html>

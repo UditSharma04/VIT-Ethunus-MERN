@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+        }
+
+        .nav-button {
+            width: 20px;
+            height: 20px;
+            display: block;
+            padding: 16px;
+            margin: 5px 5px 5px 0px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+            position: relative;
+            transition: background-color 0.5s ease-in-out, width 0.2s ease-in-out;
+        }
+
+        .nav-button:hover {
+            background-color: #555;
+            width: 30px;
+        }
+
+        .nav-button::after {
+            content: attr(data-text);
+            color: black;
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .nav-button:hover::after {
+            opacity: 1;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .content {
+            margin-left: 220px; /* To give space for the sidebar */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#" class="nav-button green" data-text="Green is chosen"></a>
+            <a href="#" class="nav-button blue" data-text="Blue is chosen"></a>
+            <a href="#" class="nav-button red" data-text="Red is chosen"></a>
+            <a href="#" class="nav-button black" data-text="Black is chosen"></a>
+        </div>
+        <div class="content">
+            <h1>Hoverable Sidenav Buttons</h1>
+            <h3>Hover over the buttons in the left side navigation to open them.</h3>
+        </div>
+    </div>
+</body>
+</html>
