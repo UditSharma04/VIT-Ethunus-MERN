@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Cards</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-custom {
+            margin-bottom: 20px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            width: 220px;
+        }
+        .card-custom img {
+            height: 160px;
+            object-fit: cover;
+            transition: opacity 0.6s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        a{
+            color: rgb(236, 216, 37);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-custom">
+                    <img src="../../Images/backg.webp" class="card-img-top" alt="Material Cards">
+                    <div class="card-body">
+                        <h5 class="card-title">MATERIAL CARDS</h5>
+                        <p class="card-text">Cards for display in portfolio style<br> material design by Google.</p>
+                        <div>
+                            <a href="#">LINK</a>
+                            <a href="#">LINK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-custom">
+                    <img src="../../Images/backg.webp" class="card-img-top" alt="Material Cards">
+                    <div class="card-body">
+                        <h5 class="card-title">MATERIAL CARDS</h5>
+                        <p class="card-text">Cards for display in portfolio style<br> material design by Google.</p>
+                        <div>
+                            <a href="#">LINK</a>
+                            <a href="#">LINK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-custom">
+                    <img src="../../Images/backg.webp" class="card-img-top" alt="Material Cards">
+                    <div class="card-body">
+                        <h5 class="card-title">MATERIAL CARDS</h5>
+                        <p class="card-text">Cards for display in portfolio style<br> material design by Google.</p>
+                        <div>
+                            <a href="#">LINK</a>
+                            <a href="#">LINK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-custom">
+                    <img src="../../Images/backg.webp" class="card-img-top" alt="Material Cards">
+                    <div class="card-body">
+                        <h5 class="card-title">MATERIAL CARDS</h5>
+                        <p class="card-text">Cards for display in portfolio style<br> material design by Google.</p>
+                        <div>
+                            <a href="#">LINK</a>
+                            <a href="#">LINK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll('.card-custom').forEach(card => {
+            card.addEventListener('mouseover', () => {
+                const img = card.querySelector('img');
+                img.dataset.src = img.src;  // Store the current src
+                img.src = '../../Images/placeimg.webp';
+            });
+
+            card.addEventListener('mouseout', () => {
+                const img = card.querySelector('img');
+                img.src = img.dataset.src;  // Restore the original src
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builderz Layout</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin:0px 45px;
+            background-color: rgb(221, 221, 221);
+        }
+        .header {
+            background-color: #fcb614; /* Yellow background */
+            padding: 10px 20px 0px 10px; 
+        }
+        .header .contact-info {
+            color: #041249; /* Dark blue color */
+        }
+        .navbar-custom {
+            background-color: #041249; /* Dark blue background */
+            margin-left: 10px;
+        }
+        .navbar-brand-custom {
+            color: #fcb614; /* Yellow color */
+        }
+        .navbar-custom .nav-link {
+            color: white;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hero-text h1,
+        .hero-text h3 {
+            margin: 0;
+        }
+        .cta-button {
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 10px 20px;
+            color: white;
+            text-transform: uppercase;
+            margin-top: 40px;
+        }
+        .info-section {
+            background-color: #041249; /* Dark blue background */
+            color: white;
+        }
+        .info-box {
+            background-color: #fcb614; /* Yellow background */
+            padding: 20px;
+            text-align: center;
+        }
+        .info-box.blue-background {
+            background-color: #041249; /* Dark blue background */
+            color: #fcb614; /* Yellow text */
+        }
+        .info-box.yellow-background {
+            background-color: #fcb614; /* Yellow background */
+            color: #041249; /* Dark blue text */
+        }
+        .calimg{
+            background-color: fcb614;
+            width: 40px;
+            margin-bottom: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <h1 class="navbar-brand-custom">Builderz</h1>
+                </div>
+                <div class="col-md-8 text-right contact-info">
+                    <span class="mr-3"><img src = "../../Images/cal.png" class="calimg"><div style="display: inline-block; text-align: left;">Opening Hour:<br> Mon - Fri, 8:00 - 9:00</div></span>
+                    <span class="mr-3"><img src = "../../Images/call.png" class="calimg"><div style="display: inline-block; text-align: left;">Call Us:<br> +012 345 6789</div></span>
+                    <span><img src = "../../Images/mail.png" class="calimg"><div style="display: inline-block; text-align: left;">Email Us:<br> info@example.com</div></span>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="button">Get A Quote</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="../../Images/builder.jpeg" alt="Construction Site">
+        <div class="hero-text">
+            <h3>We Are Professional</h3>
+            <h1><strong>For Your Dream Project</strong></h1>
+            <button class="cta-button">Get A Quote</button>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 info-box blue-background">
+                    <h4>Expert Worker</h4>
+                    <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.</p>
+                </div>
+                <div class="col-md-4 info-box yellow-background">
+                    <h4>Quality Work</h4>
+                    <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.</p>
+                </div>
+                <div class="col-md-4 info-box blue-background">
+                    <h4>24/7 Support</h4>
+                    <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+        }
+        .input-group .form-control.error,
+        .input-group .custom-select.error {
+            border-color: red;
+        }
+        .input-group .form-control:focus.error,
+        .input-group .custom-select:focus.error {
+            border-color: red;
+            box-shadow: none;
+        }
+        .input-group .input-group-append .input-group-text {
+            background: none;
+            border: none;
+        }
+        .input-group .input-group-append .input-group-text .icon {
+            color: red;
+            cursor: pointer;
+        }
+        .input-group .input-group-append .input-group-text .icon.visible {
+            display: block;
+        }
+        .input-group .input-group-append .input-group-text .icon.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <form id="myForm" novalidate>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="icon fas fa-times hidden"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="error-message">Name is required</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-group">
+                <input type="email" class="form-control" id="email" placeholder="Enter valid email address" required>
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="icon fas fa-times hidden"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="error-message">Email is required</div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-group">
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="icon fas fa-times hidden"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="error-message">Password is required</div>
+        </div>
+        <div class="form-group">
+            <label for="hobbies">Hobbies</label>
+            <div class="input-group">
+                <select class="custom-select" id="hobbies" required>
+                    <option value="">Select a hobby</option>
+                    <option value="reading">Reading</option>
+                    <option value="traveling">Traveling</option>
+                    <option value="cooking">Cooking</option>
+                </select>
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="icon fas fa-times hidden"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="error-message">Hobby is required</div>
+        </div>
+        <button type="submit" class="btn btn-danger btn-block">Submit</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script>
+    $(document).ready(function() {
+        $('form#myForm').on('submit', function(event) {
+            event.preventDefault();
+
+            var isValid = true;
+            $('.form-control, .custom-select').each(function() {
+                var $inputGroup = $(this).closest('.input-group');
+                var $errorMessage = $inputGroup.siblings('.error-message');
+                
+                if (!this.checkValidity()) {
+                    $(this).addClass('error');
+                    $inputGroup.find('.icon').addClass('visible').removeClass('hidden');
+                    $errorMessage.show();
+                    isValid = false;
+                } else {
+                    $(this).removeClass('error');
+                    $inputGroup.find('.icon').removeClass('visible').addClass('hidden');
+                    $errorMessage.hide();
+                }
+            });
+
+            if (isValid) {
+                alert('Form submitted successfully!');
+            }
+        });
+
+        $('.form-control, .custom-select').on('input change', function() {
+            var $inputGroup = $(this).closest('.input-group');
+            var $errorMessage = $inputGroup.siblings('.error-message');
+
+            if (this.checkValidity()) {
+                $(this).removeClass('error');
+                $inputGroup.find('.icon').removeClass('visible').addClass('hidden');
+                $errorMessage.hide();
+            }
+        });
+
+        $('.input-group .icon').on('click', function() {
+            var $input = $(this).closest('.input-group').find('.form-control, .custom-select');
+            $input.removeClass('error').focus();
+            $(this).removeClass('visible').addClass('hidden');
+            $(this).closest('.input-group').siblings('.error-message').hide();
+        });
+    });
+</script>
+</body>
+</html>

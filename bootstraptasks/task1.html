@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethnus Layout</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-custom {
+            background-color: #00bcd4; /* Light blue background */
+            align-content: center;
+        }
+        .content-wrapper {
+            display: flex;
+            height: 80vh;
+            margin: 0;
+            padding: 0;
+        }
+        .left-sidebar {
+            width: 15%;
+            background-color: #f4f4f4;
+        }
+        .content {
+            width: 80%;
+            background-color: #e8e8e8;
+            padding-top: 10px;
+            padding: 0;
+        }
+        .right-sidebar {
+            width: 20%;
+            background-color: #777;
+            color: white;
+            padding-top: 10px;
+        }
+        .top-nav {
+            background-color: #979797; /* Dark grey background */
+            color: white;
+        }
+        .navbar-brand-center {
+            margin: 0 auto;
+            display: block;
+        }
+        .nav-link {
+            color: white !important;
+            margin: 0 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <div class="navbar-header mx-auto">
+                <h3 class="navbar-brand navbar-brand-center" href="#">Ethnus Layout</h3>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Top Navigation Bar -->
+    <div class="container-fluid top-nav">
+        <div class="row justify-content-between">
+            <div class="col d-flex justify-content-start">
+                <a href="#" class="nav-link">HOME</a>
+                <a href="#" class="nav-link">MENU</a>
+                <a href="#" class="nav-link">ABOUT</a>
+                <a href="#" class="nav-link">CONTACT</a>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <a href="#" class="nav-link">SIGN UP</a>
+                <a href="#" class="nav-link">LOGIN</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid content-wrapper">
+        <div class="content text-center">Write your content here</div>
+        <div class="right-sidebar text-center">This is</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .error-input {
+            border-color: #e3342f;
+        }
+        .error-feedback {
+            color: #e3342f;
+            display: none;
+        }
+        .error-icon {
+            display: none;
+            color: #e3342f;
+            cursor: pointer;
+        }
+        .input-group .form-control:focus {
+            z-index: 2;
+        }
+        .input-group .input-group-append {
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text error-icon"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+                <small class="error-feedback">Please supply your first name</small>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text error-icon"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+                <small class="error-feedback">Please supply your last name</small>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                    </div>
+                    <input type="email" class="form-control" id="email" placeholder="E-Mail Address" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text error-icon"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+                <small class="error-feedback">Please supply your email address</small>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone #</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="phone" placeholder="(845)555-1212" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text error-icon"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+                <small class="error-feedback">Please supply your phone number</small>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-home"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="address" placeholder="Address" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text error-icon"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+                <small class="error-feedback">Please supply your street address</small>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-building"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="city" placeholder="City" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text error-icon"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+                <small class="error-feedback">Please supply your city</small>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" class="form-control" required>
+                    <option value="">Please select your state</option>
+                    <option value="NY">New York</option>
+                    <option value="CA">California</option>
+                    <option value="TX">Texas</option>
+                </select>
+                <small class="error-feedback">Please select your state</small>
+            </div>
+            <div class="form-group">
+                <label>Do you have hosting?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hosting" id="hostingYes" value="yes" required>
+                    <label class="form-check-label" for="hostingYes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hosting" id="hostingNo" value="no" required>
+                    <label class="form-check-label" for="hostingNo">No</label>
+                </div>
+                <small class="error-feedback">Please select an option</small>
+            </div>
+            <div class="form-group">
+                <label for="description">Project Description</label>
+                <textarea class="form-control" id="description" rows="3" required></textarea>
+                <small class="error-feedback">Please provide a project description</small>
+            </div>
+            <button type="submit" class="btn btn-warning" style="justify-content: center; margin-left:48%;"><img src="../../Images/send.svg" style="width:25px;"> Send</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault();
+                var isValid = true;
+
+                $('#contactForm input, #contactForm textarea, #contactForm select').each(function() {
+                    var $this = $(this);
+                    if (!$this.val()) {
+                        isValid = false;
+                        $this.addClass('error-input');
+                        $this.nextAll('.error-feedback').show();
+                        $this.siblings('.input-group-append').find('.error-icon').show();
+                    } else {
+                        $this.removeClass('error-input');
+                        $this.nextAll('.error-feedback').hide();
+                        $this.siblings('.input-group-append').find('.error-icon').hide();
+                    }
+                });
+
+                if (isValid) {
+                    alert('Form submitted successfully!');
+                    // Here you can handle the form submission
+                }
+            });
+
+            $('.error-icon').on('click', function() {
+                var $input = $(this).closest('.input-group').find('.form-control');
+                $input.removeClass('error-input').focus();
+                $(this).hide();
+                $input.nextAll('.error-feedback').hide();
+            });
+        });
+    </script>
+</body>
+</html>
