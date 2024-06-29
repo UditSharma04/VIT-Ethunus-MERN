@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin:5px;
+        }
+        label{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let now = new Date();
+        function date(){
+            let a = now.getDate();
+            let b = now.getMonth();
+            now.setMonth(b);
+            let options = { month: 'long' };
+            let monthName = new Intl.DateTimeFormat('en-US', options).format(now);
+            let c = now.getFullYear();
+            document.getElementById('date').innerHTML = a+'/'+monthName + '/' + c + '<br>';
+        }
+        function time(){
+            let now = new Date();
+            let options = {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+            };
+            let opt = {
+                timeZoneName: 'long',
+            }
+            let tzn = ' (' + new Intl.DateTimeFormat('en-US', opt).format(now).replace(' ','').slice(-20)+')';
+            let formattedTime = now.toLocaleString('en-US', options).replaceAll(',','');
+            let timezoneOffset = now.getTimezoneOffset();
+            let hoursOffset = Math.floor(Math.abs(timezoneOffset) / 60);
+            let minutesOffset = Math.abs(timezoneOffset) % 60;
+            let offsetSign = timezoneOffset > 0 ? '-' : '+';
+            let gmtOffset = `GMT${offsetSign}${String(hoursOffset).padStart(2, '0')}${String(minutesOffset).padStart(2, '0')}${tzn}`;
+            gmtOffset = gmtOffset.replaceAll(',','');
+            document.getElementById('Time').innerHTML = `${formattedTime} ${gmtOffset}`;
+        }
+    </script>
+    <button type="button" onclick="date()">show date</button><br>
+    <label id="date"></label><br>
+    <button type="button" onclick="time()">show Time</button><br>
+    <label id="Time"></label><br>    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mult(){
+            let a = document.getElementById('num1').value;
+            let b = document.getElementById('num2').value;
+            let c = "The Result Is:<br>" + a*b;
+            document.getElementById('res').innerHTML = c;
+        }
+        function divd(){
+            let a = document.getElementById('num1').value;
+            let b = document.getElementById('num2').value;
+            if(b!=0){
+                let c = "The Result Is:<br>" + a/b;
+                document.getElementById('res').innerHTML = c
+            }
+            else{
+                document.getElementById('res').innerHTML = "Division by 0 is not possible";
+            }
+        }
+    </script>
+    <div>
+        <form>
+            <label>
+                1<sup>st</sup> Number:
+            </label>
+            <input id="num1"><br>
+            <label>
+                2<sup>nd</sup> Number:
+            </label>
+            <input id="num2"><br><br>
+            <button type="button" onclick="mult()">Multiply</button>
+            <button type="button" onclick="divd()">Divide</button><br>
+            <label id="res"></label>
+        </form>
+    </div>
+</body>
+</html>

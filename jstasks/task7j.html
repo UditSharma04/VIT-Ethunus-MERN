@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* css to provide background */
+      body {
+        background-image: url("../../Images/background.jpeg");
+      }
+    </style>
+  </head>
+  <body>
+    <!-- to display an image -->
+    <input type="button" value="start" onclick="start()" />
+    <input type="button" value="stop" onclick="stop()" />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <img src="../images/car.png" alt="error" id="mycar" />
+
+    <script>
+      // to move my car
+      var animation;
+      function init() {
+        let mycar = document.getElementById("mycar");
+        mycar.style.position = "absolute";
+        mycar.style.left = "0px";
+      }
+      window.onload = init;
+
+      function start() {
+        let mycar = document.getElementById("mycar");
+        mycar.style.left = parseInt(mycar.style.left) + 10 + "px";
+        animation = setTimeout(start, 50);
+      }
+      function stop() {
+        let mycar = document.getElementById("mycar");
+        clearTimeout(animation);
+        mycar.style.left = "paused";
+      }
+    </script>
+  </body>
+</html>
